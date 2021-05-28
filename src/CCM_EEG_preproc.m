@@ -14,8 +14,9 @@ wpms.dirs  = struct('CWD','/opt/src/','packages','PACKAGES', ...
 wpms.names = dir('/opt/src/INPUTS/RAW/*.raw')
 t = struct2table(wpms.names)
 t = t.name
-disp(length(wpms.names))
+disp(1:length(wpms.names))
 wpms.names = {t}
+wpms.names = wpms.names{1,1}
 for name_i = 1:length(wpms.names)
 wpms.names(name_i)= erase(wpms.names(name_i),'.raw')
 end
